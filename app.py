@@ -3,14 +3,14 @@ from flask import Flask
 app = Flask(__name__)
 
 # Get "/"
-@app.route("/")
+@app.route("/", methods = ["POST"])
 def index():
-    return{"massage": "welcome to your finance tracker"}
+    return[]
 
-# Get a single user
-@app.get("/users/<id>")
+# Get a user
+@app.route("/users/<id>", methods=["GET"])
 def get_user(id):
-    return []
+    return {"message": f"User {id} retrieved"}
 
 # Add a user
 @app.post("/users")
