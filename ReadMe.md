@@ -5,7 +5,7 @@
 -   Create a postman collection of all models plus routes
 
 # The idea
--  Personal Finance Tracker
+- Personal Finance Tracker
 - This app will help users track their expenses and budgets while maintaining clear records.
 
 
@@ -34,6 +34,6 @@
 - limit: Max allowed spending in that category
 
 # Relationships:
-- One user → Many transactions
-- One transaction → Belongs to one category
-- One user → Can set multiple budgets & financial goal
+- One user → Many Expenses
+- One transaction/expense → Belongs to one category
+- One user → Can set multiple budgets

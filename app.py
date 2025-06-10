@@ -2,6 +2,11 @@ from flask import Flask
 
 app = Flask(__name__)
 
+# Get "/"
+@app.route("/")
+def index():
+    return{"massage": "welcome to your finance tracker"}
+
 # Get a single user
 @app.get("/users/<id>")
 def get_user(id):
