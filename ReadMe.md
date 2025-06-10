@@ -11,23 +11,23 @@
 
 # Structure 
 - 4 Models (User, Expense, Budget , category):
-- User
+- users
 - id: Unique identifier
 - username: Name of the user
 - email: Contact email
 
-- Transaction (Linked to User & Category)
+- expenses (Linked to User & Category)
 - id: Unique identifier
 - user_id: Belongs to a user
 - amount: Transaction value
 - category_id: Linked to a spending category
 - date: When the transaction happened
 
-- Category (Linked to Transactions)
+- categories (Linked to Transactions)
 - id: Unique identifier
 - name: Example: Food, Rent, Savings, Investment
 
-- Budget (Linked to User & Category)
+- budgets (Linked to User & Category)
 - id: Unique identifier
 - user_id: Belongs to a user
 - category_id: Which expense category it applies to
