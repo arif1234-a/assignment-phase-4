@@ -1,10 +1,10 @@
 from flask import Flask
 from flask_restful import Api, Resource
 from flask_migrate import Migrate
-from users import UserResource
-from categories import CategoriesResource
-from budgets import BudgetResource
-from expenses import ExpenseResource
+from methods.users import UserResource
+from methods.categories import CategoriesResource
+# from methods.budgets import BudgetResource
+# from methods.expenses import ExpenseResource
 from models import db
 
 app = Flask(__name__)
@@ -21,7 +21,7 @@ app.config["SQLALCHEMY_ECHO"] = True
 
 
 # Get "/"
-@app.route("/", methods = ["POST"])
+@app.route("/")
 def index():
     return[]
 
@@ -97,5 +97,5 @@ def index():
     
 api.add_resource(UserResource, "/users", "/users/<id>")
 api.add_resource(CategoriesResource, "/categories", "/categories/<id>")
-api.add_resource(BudgetResource, "/budgets", "/budgets/<id>")
-api.add_resource(ExpenseResource, "/expenses", "/expenses/<id>")
+# api.add_resource(BudgetResource, "/budgets", "/budgets/<id>")
+# api.add_resource(ExpenseResource, "/expenses", "/expenses/<id>")
